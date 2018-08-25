@@ -16,7 +16,9 @@ parst.find.email('some text containing username@gmail.com');
 ### Methods
 **match**
 - Match entire string against regex
+
 `match.<regex>(compareString)`
+
 _compareString_ - `string`: String to match against \<regex\>
 
 RETURNS: `boolean` - true if entire string matches the regex, false otherwise
@@ -30,6 +32,7 @@ console.log(parst.match.email('contains a me.person@gmail.com')) // false
 
 **find**
 - Find first occurrence of <regex> inside the string
+
 `find.<regex>(compareString)`
 _compareString_ - `string`: String to search using \<regex\>
 
@@ -45,6 +48,7 @@ console.log(parst.find.email('contains no email')) // -1
 
 **findMulti**
 - Find up to specified number of occurrences of <regex> inside the string
+
 `findMulti.regex(compareString, count)`
 _compareString_ - `string`: String to search using \<regex\>
 
@@ -62,6 +66,7 @@ console.log(parst.findMulti.email('contains no email', 4)) // []
 
 **findAll**
 - Find all occurrences of \<regex\> inside the string
+
 `findAll.regex(compareString)`
 _compareString_ - `string`: String to search using \<regex\>
 
@@ -77,6 +82,7 @@ console.log(parst.findMulti.email('contains no email', 4)) // []
 
 **replace**
 - Replace first occurrence of <regex> with a provided replacement string
+
 `replace.regex(compareString, replaceString)`
 _compareString_ - `string`: String to search using \<regex\>
 
@@ -94,6 +100,7 @@ console.log(parst.replace.email('contains no email', 'correct.email@gmail.com'))
 
 **replaceAll**
 - Replace all occurrences of \<regex\> with a provided replacement string
+
 `replaceAll.regex(compareString, replaceString)`
 _compareString_ - `string`: String to search using \<regex\>
 
