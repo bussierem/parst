@@ -15,7 +15,7 @@ RegEx has, without requiring everyone to understand the language to use it.
 ---
 
 ## Planned Functionality
-**NOTE:** _Each language will use the suggested naming scheme for these (`camelCase`/`PascalCase`/`snake_case`)_
+**NOTE:** _Each language will use their own suggested naming scheme for these (`camelCase`/`PascalCase`/`snake_case`)_
 
 ### MATCH:
 * **Desc:** Given a string, returns whether the entire string matches the regex
