@@ -10,7 +10,7 @@ RegEx has, without requiring everyone to understand the language to use it.
 ---
 
 ## Currently published packages:
-* [Javascript](https://www.npmjs.com/package/parst)
+* [Javascript (npm)](https://www.npmjs.com/package/parst)
 
 ---
 
