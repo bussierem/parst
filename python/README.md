@@ -13,8 +13,8 @@ import parst
 # Usage format:  parst.<method>.<regex>()
 
 # Example:
-parst.match.email('username@gmail.com');
-parst.find.email('some text containing username@gmail.com');
+parst.match.email('username@gmail.com')
+parst.find.email('some text containing username@gmail.com')
 ```
 
 ### Methods
@@ -44,7 +44,7 @@ Example:
 import parst
 
 print(parst.extract.email('other.email@gmail.com')) #  { 'user': 'other.email', 'host': 'gmail', 'tld': 'com' }
-print(parst.extract.email('contains no email')); # {}
+print(parst.extract.email('contains no email')) # {}
 ```
 ---
 **extract_all** (`extract_all.<regex>(compare_str)`)
@@ -59,7 +59,7 @@ Example:
 import parst
 
 print(parst.extract_all.email('other.email@gmail.com, foo@bar.net')) #  [{ 'user': 'other.email', 'host': 'gmail', 'tld': 'com' }, { 'user': 'foo', 'host': 'bar', 'tld': 'net' }]
-print(parst.extract_all.email('contains no email')); # []
+print(parst.extract_all.email('contains no email')) # []
 ```
 ---
 **find** (`find.<regex>(compare_str)`)
@@ -140,5 +140,5 @@ Example:
 import parst
 
 print(parst.replaceAll.email('there are several wrong.email@gmail.com and other.email@gmail.com', 'correct.email@gmail.com')) #  "there are several correct.email@gmail.com and correct.email@gmail.com"
-print(parst.replaceAll.email('contains no email', 'correct.email@gmail.com')); # "contains no email"
+print(parst.replaceAll.email('contains no email', 'correct.email@gmail.com')) # "contains no email"
 ```
