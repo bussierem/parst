@@ -43,7 +43,7 @@ _Parsing Strings with common regexes (without needing to know them!)_
 ---
 
 ## Language Support for Named Groups
-* **NOTE:** [Naming is not yet available for Javascript](https://github.com/tc39/proposal-regexp-named-groups) **(as of 8/25/2018)**
+* **NOTE:** [Naming is not yet available for Javascript]() **(as of 8/25/2018)**
 
 |  Language  |       Named Groups       | Backreference |
 |------------|--------------------------|---------------|
@@ -54,7 +54,7 @@ _Parsing Strings with common regexes (without needing to know them!)_
 | PHP        | `(?P<name>)`             | N/A           |
 | Ruby       | `(?<name>)`, `(?'name')` | `\k<name>`    |
 | Javascript | `(?<name>)`              | `\k<name>`    |
-| C++        | N/A                      | N/A           |
+| C++        | [N/A](https://github.com/tc39/proposal-regexp-named-groups)                     | [N/A](https://github.com/tc39/proposal-regexp-named-groups)           |
 | Rust       | `(?P<name>)`             | N/A           |
 | Golang     | `(?P<name>)`             | ???           |
 | D          | `(?P<name>)`             | ???           |
