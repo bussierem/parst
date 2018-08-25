@@ -1,0 +1,12 @@
+{
+  "name": "parst",
+  "version": "1.0.0",
+  "description": "A simple interface for many common Regexes for parsing strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Bussiere <max.bussiere@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
