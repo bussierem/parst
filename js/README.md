@@ -27,7 +27,7 @@ const parst = require('parst');
 console.log(parst.match.email('me.person@gmail.com')) // true
 console.log(parst.match.email('contains a me.person@gmail.com')) // false
 ```
-
+---
 **find** (`find.<regex>(compareString)`)
 - Find first occurrence of <regex> inside the string
 
@@ -42,7 +42,7 @@ const parst = require('parst');
 console.log(parst.find.email('contains me.person@gmail.com')) // 9
 console.log(parst.find.email('contains no email')) // -1
 ```
-
+---
 **findMulti** (`findMulti.regex(compareString, count)`)
 - Find up to specified number of occurrences of <regex> inside the string
 
@@ -59,7 +59,7 @@ const parst = require('parst');
 console.log(parst.findMulti.email('first@gmail.com second@gmail.com third@gmail.com', 2)) // [ [ 0, 'first@gmail.com' ], [ 16, 'second@gmail.com' ] ]
 console.log(parst.findMulti.email('contains no email', 4)) // []
 ```
-
+---
 **findAll** (`findAll.regex(compareString)`)
 - Find all occurrences of \<regex\> inside the string
 
@@ -74,7 +74,7 @@ const parst = require('parst');
 console.log(parst.findMulti.email('first@gmail.com second@gmail.com third@gmail.com')) // [ [ 0, 'first@gmail.com' ], [ 16, 'second@gmail.com' ], [ 33, 'third@gmail.com' ] ]
 console.log(parst.findMulti.email('contains no email', 4)) // []
 ```
-
+---
 **replace** (`replace.regex(compareString, replaceString)`)
 - Replace first occurrence of <regex> with a provided replacement string
 
@@ -91,7 +91,7 @@ const parst = require('parst');
 console.log(parst.replace.email('there is a wrong.email@gmail.com', 'correct.email@gmail.com')) //  "there is a correct.email@gmail.com"
 console.log(parst.replace.email('contains no email', 'correct.email@gmail.com')); // "contains no email"
 ```
-
+---
 **replaceAll** (`replaceAll.regex(compareString, replaceString)`)
 - Replace all occurrences of \<regex\> with a provided replacement string
 
