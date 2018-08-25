@@ -100,7 +100,7 @@ _compareString_: `string` - String to search using \<regex\>
 
 _replaceString_: `string` - String to replace \<regex\> with
 
-RETURNS: `string` - The resulting string after the replacement is applied
+RETURNS: `string` - The resulting string after the replacements are applied
 
 Example:
 ```
