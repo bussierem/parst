@@ -17,7 +17,8 @@ parst.find.email('some text containing username@gmail.com');
 **match**
 - Match entire string against regex
 `match.<regex>(compareString)`
-_compareString_ - `string`: String to match against <regex>
+_compareString_ - `string`: String to match against \<regex\>
+
 RETURNS: `boolean` - true if entire string matches the regex, false otherwise
 Example:
 ```
@@ -30,8 +31,10 @@ console.log(parst.match.email('contains a me.person@gmail.com')) // false
 **find**
 - Find first occurrence of <regex> inside the string
 `find.<regex>(compareString)`
-_compareString_ - `string`: String to search using <regex>
+_compareString_ - `string`: String to search using \<regex\>
+
 RETURNS: `integer` - index of start of first occurrence, or -1 if none
+
 Example:
 ```
 const parst = require('parst');
@@ -43,9 +46,12 @@ console.log(parst.find.email('contains no email')) // -1
 **findMulti**
 - Find up to specified number of occurrences of <regex> inside the string
 `findMulti.regex(compareString, count)`
-_compareString_ - `string`: String to search using <regex>
+_compareString_ - `string`: String to search using \<regex\>
+
 _count_ - `integer`: Maximum number of occurrences to find
+
 RETURNS: `array[array[integer, string]]` - list of all [startIndex, foundMatch] in the string or empty array if no matches
+
 Example:
 ```
 const parst = require('parst');
@@ -55,10 +61,12 @@ console.log(parst.findMulti.email('contains no email', 4)) // []
 ```
 
 **findAll**
-- Find all occurrences of <regex> inside the string
+- Find all occurrences of \<regex\> inside the string
 `findAll.regex(compareString)`
-_compareString_ - `string`: String to search using <regex>
+_compareString_ - `string`: String to search using \<regex\>
+
 RETURNS: `array[array[integer, string]]` - list of all [startIndex, foundMatch] in the string or empty array if no matches
+
 Example:
 ```
 const parst = require('parst');
@@ -70,9 +78,12 @@ console.log(parst.findMulti.email('contains no email', 4)) // []
 **replace**
 - Replace first occurrence of <regex> with a provided replacement string
 `replace.regex(compareString, replaceString)`
-_compareString_ - `string`: String to search using <regex>
-_replaceString_ - `string`: String to replace <regex> with
+_compareString_ - `string`: String to search using \<regex\>
+
+_replaceString_ - `string`: String to replace \<regex\> with
+
 RETURNS: `string` - The resulting string after the replacement is applied
+
 Example:
 ```
 const parst = require('parst');
@@ -82,11 +93,14 @@ console.log(parst.replace.email('contains no email', 'correct.email@gmail.com'))
 ```
 
 **replaceAll**
-- Replace all occurrences of <regex> with a provided replacement string
+- Replace all occurrences of \<regex\> with a provided replacement string
 `replaceAll.regex(compareString, replaceString)`
-_compareString_ - `string`: String to search using <regex>
-_replaceString_ - `string`: String to replace <regex> with
+_compareString_ - `string`: String to search using \<regex\>
+
+_replaceString_ - `string`: String to replace \<regex\> with
+
 RETURNS: `string` - The resulting string after the replacement is applied
+
 Example:
 ```
 const parst = require('parst');
