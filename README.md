@@ -15,27 +15,27 @@ _Parsing Strings with common regexes (without needing to know them!)_
 * **Returns:** `array(collection(string:string))`
 
 #### FIND:
-* **Desc:** _given a string, return the index of the first occurrence of the regex_
+* **Desc:** Given a string, return the index of the first occurrence of the regex
 * **Returns:** `integer`
 
 #### FIND_MULTI:
-* **Desc:** _as FIND, but with the first X occurrences of the regex (defined by user input) with the index they start at_
+* **Desc:** As **FIND**, but with the first X occurrences of the regex (defined by user input) with the index they start at
 * **Returns:** `array(array(integer,string))`
 
 #### FIND_ALL:
-* **Desc:** _as FIND, but with all occurrences of the regex_
+* **Desc:** As **FIND**, but with all occurrences of the regex
 * **Returns:** `array(integer)`
 
 #### REPLACE:
-* **Desc:** _given a string, replace the the first occurrence of the regex in the string with a new string_
+* **Desc:** Given a string, replace the the first occurrence of the regex in the string with a new string
 * **Returns:** `integer` _[0 success, -1 failure]_
 
 #### REPLACE_ALL:
-* **Desc:** _as REPLACE, but with all occurrences of the regex_
+* **Desc:** As **REPLACE**, but with all occurrences of the regex
 * **Returns:** `string` _[new string with replacement applied]_
 
 #### REPLACE_COMPLEX:
-* **Desc:** _given a string and a regex with multiple NAMED capture groups, replace each occurrence of each capture group with a string found in a collection of {capture_group: replacement_string}_
+* **Desc:** Given a string and a regex with multiple _named_ capture groups, replace each occurrence of each capture group with a string found in a collection of {capture_group: replacement_string}
 * **Returns:** `string` _[new string with replacement applied]_
 
 ---
