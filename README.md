@@ -39,7 +39,7 @@ RegEx has, without requiring everyone to understand the language to use it.
 
 ### FIND_ALL:
 * **Desc:** As **FIND**, but with all occurrences of the regex
-* **Returns:** `array(integer)` - list of all [startIndex, foundMatch] in the string or empty array if no matches
+* **Returns:** `array(array(integer,string))` - list of all [startIndex, foundMatch] in the string or empty array if no matches
 
 ### REPLACE:
 * **Desc:** Given a string, replace the the first occurrence of the regex in the string with a new string
@@ -47,10 +47,6 @@ RegEx has, without requiring everyone to understand the language to use it.
 
 ### REPLACE_ALL:
 * **Desc:** As **REPLACE**, but with all occurrences of the regex
-* **Returns:** `string` - The resulting string after the replacements are applied
-
-### REPLACE_COMPLEX:
-* **Desc:** Given a string and a regex with multiple _named_ capture groups, replace each occurrence of each capture group with a string found in a collection of {capture_group: replacement_string}
 * **Returns:** `string` - The resulting string after the replacements are applied
 
 ---

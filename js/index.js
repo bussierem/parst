@@ -67,6 +67,4 @@ module.exports = {
       }
     )
   }),
-  // given a map of {namedGroup: replaceString}, replace first occurrence of each namedGroup with replaceString
-  replaceComplex: { /* NAMED CAPTURE GROUPS NOT SUPPORTED */ },
 }

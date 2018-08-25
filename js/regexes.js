@@ -3,7 +3,7 @@ const utils = require('./utils');
 const base = {
   // Personal Information
   email: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,63}',
-  phone: '(?:\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}',
+  phone: '(?:\\+\\d{1,2}\\s)?\\(?:\\d{3}\\)?[\\s\\.-]?\\d{3}[\\s\\.-]?\\d{4}',
   postalCode: {
     'us': '\\d{5}(?:[ \\-]\\d{4})?',
   },
