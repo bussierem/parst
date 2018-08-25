@@ -2,6 +2,8 @@
 _Parsing Strings with common regexes (without needing to know them!)_
 
 ## Planned Functionality
+_NOTE:  Each language will use the suggested naming scheme for these (camelCase/PascalCase/snake_case)_
+
 #### MATCH:
 * **Desc:** Given a string, returns whether the entire string matches the regex
 * **Returns:** `boolean`
