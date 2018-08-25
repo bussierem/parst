@@ -3,15 +3,15 @@ _Parsing Strings with common regexes (without needing to know them!)_
 
 ## Planned Functionality
 #### MATCH:
-* **Desc:** _given a string, returns whether the entire string matches the regex_
+* **Desc:** Given a string, returns whether the entire string matches the regex
 * **Returns:** `boolean`
 
 #### EXTRACT:
-* **Desc:** _given a string, return the named match groups of the regex for that string_
+* **Desc:** Given a string, return the named match groups of the regex for that string
 * **Returns:** `collection(string:string)`
 
 #### EXTRACT_ALL:
-* **Desc:** _as EXTRACT, but for all occurrences of the regex_
+* **Desc:** As **EXTRACT**, but for all occurrences of the regex
 * **Returns:** `array(collection(string:string))`
 
 #### FIND:
