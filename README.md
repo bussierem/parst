@@ -11,6 +11,7 @@ RegEx has, without requiring everyone to understand the language to use it.
 
 ## Currently published packages:
 * [Javascript (npm)](https://www.npmjs.com/package/parst)
+* [Python (PyPi)](https://pypi.org/project/parst) **Note:  As of 8/25/2018 this link is not active yet, but** `pip3 install parst` **works**
 
 ---
 
