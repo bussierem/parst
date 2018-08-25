@@ -43,7 +43,6 @@ _Parsing Strings with common regexes (without needing to know them!)_
 ---
 
 ## Language Support for Named Groups
-* **NOTE:** [Naming is not yet available for Javascript]() **(as of 8/25/2018)**
 
 |  Language  |       Named Groups       | Backreference |
 |------------|--------------------------|---------------|
