@@ -1,6 +1,19 @@
 # Parst
 _Parsing Strings with common regexes (without needing to know them!)_
 
+## What is this?
+This library exists to provide cross-language ability to have access to the Regular Expressions that help
+parse many commonly found string patterns.  Many people write complex functions or just copy/paste from the internet
+instead of trying to learn a powerful language like RegEx, so this language will help give access to the powers
+RegEx has, without requiring everyone to understand the language to use it.
+
+---
+
+## Currently published packages:
+* [Javascript]()
+
+---
+
 ## Planned Functionality
 **NOTE:** _Each language will use the suggested naming scheme for these (`camelCase`/`PascalCase`/`snake_case`)_
 
