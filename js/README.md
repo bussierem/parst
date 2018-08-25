@@ -7,7 +7,7 @@ _Parsing Strings with common regexes (without needing to know them!)_
 ```
 const parst = require('parst');
 
-// Usage format:  parst.<function>.<regex>()
+// Usage format:  parst.<method>.<regex>()
 
 // Example:
 parst.match.email('username@gmail.com');
