@@ -1,4 +1,4 @@
-# Common Regex
+# Parst
 
 _Parsing Strings with common regexes (without needing to know them!)_
 
