@@ -41,7 +41,7 @@ _Parsing Strings with common regexes (without needing to know them!)_
 ---
 
 ## Language Support for Named Groups
-* NOTE: [Naming is not yet available for Javascript](https://github.com/tc39/proposal-regexp-named-groups)
+* NOTE: [Naming is not yet available for Javascript](https://github.com/tc39/proposal-regexp-named-groups) **(as of 8/25/2018)**
 
 |  Language  |       Named Groups       | Backreference |
 |------------|--------------------------|---------------|
