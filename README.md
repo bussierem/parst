@@ -86,17 +86,17 @@ RegEx has, without requiring everyone to understand the language to use it.
 **If you wish to create a new regex to be added to the list:**
 1. Make a branch off `master`, named however you wish
 2. Validate the new regex by hand somewhere such as [Regex101](https://www.regex101.com)
-  1. Please create capture groups for the important parts of the regex if you can, or if it will be needed - this will be required to support things like `extract`
-    1. If you are unable to or don't understand capture groups well enough, please make a new Issue to add support in the future for that regex.
+    1. Please create capture groups for the important parts of the regex if you can, or if it will be needed - this will be required to support things like `extract`
+        1. If you are unable to or don't understand capture groups well enough, please make a new Issue to add support in the future for that regex.
 3. Add the new regex first to `parst/regexes/README.md` - follow format for new ones based on old.
-  1. If the regex will have multiple options (such as the way `postalCodes` do) please make a table for future expansion
-    1. For this table, keep the "key" for lookup all lowercase, resorting to `camelCase` if you must
+    1. If the regex will have multiple options (such as the way `postalCodes` do) please make a table for future expansion
+        1. For this table, keep the "key" for lookup all lowercase, resorting to `camelCase` if you must
 4. Add the regex to any or all languages that are supported by Parst - this should be relatively easy (mostly copy/paste)
-  1. **IMPORTANT:**  Different languages have different requirements for things like named groups or backreference.  Please refer to [Regex Feature Support](#feature-support) for more information.
-  2. **IMPORTANT:**  Each language has some recommended naming scheme (`PascalCase`/`camelCase`/`snake_case`) - please use that naming scheme for the key of the new regex in each language.  If unsure, match the style of other regexes in the datastore for that language.
-  3. If you do not want to or cannot for some reason add a regex to a language, either:
-    1. Make a new Issue
-    2. Add a note to the `parst/regexes/README.md` next to the new regex about which languages still need supporting for that regex.
+    1. **IMPORTANT:**  Different languages have different requirements for things like named groups or backreference.  Please refer to [Regex Feature Support](#feature-support) for more information.
+    2. **IMPORTANT:**  Each language has some recommended naming scheme (`PascalCase`/`camelCase`/`snake_case`) - please use that naming scheme for the key of the new regex in each language.  If unsure, match the style of other regexes in the datastore for that language.
+    3. If you do not want to or cannot for some reason add a regex to a language, either:
+        1. Make a new Issue
+        2. Add a note to the `parst/regexes/README.md` next to the new regex about which languages still need supporting for that regex.
 5. Submit a Pull Request for your branch to be merged into `master`
 
 ---
