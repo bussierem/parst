@@ -112,7 +112,6 @@ RegEx has, without requiring everyone to understand the language to use it.
   - Description of what Parst does and is for
   - Installation and Usage instructions
     - Do NOT forget to include how to import Parst for proper use
-- You must include the MIT License in your package.
 - If you wish to publish the new language support in a separate repo, you are welcome to, however I ask please that you submit a PR here that both links to your repo for that language's support AND links to the published package in the [Packages](#packages) section of this document.
   - If creating a "sister" repo like this, please still follow the standards outlined below for adding support.
 
