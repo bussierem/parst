@@ -7,11 +7,11 @@ parse many commonly found string patterns.  Many people write complex functions 
 instead of trying to learn a powerful language like RegEx, so this language will help give access to the powers
 RegEx has, without requiring everyone to understand the language to use it.
 
-- **[Packages](#packages)**
-- **[Functionality](#functionality)**
-- **[Regex Support by Language](#feature-support)**
-- **[Contributing Regex Support](#add-regex)**
-- **[Contributing Language Support](#add-language)**
+1. **[Packages](#packages)**
+2. **[Functionality](#functionality)**
+3. **[Regex Support by Language](#feature-support)**
+4. **[Contributing Regex Support](#add-regex)**
+5. **[Contributing Language Support](#add-language)**
 
 ---
 
@@ -105,7 +105,13 @@ RegEx has, without requiring everyone to understand the language to use it.
 ## Contributing Language Support
 
 ### Distribution
-- If you are distributing a new language to a package manager, or distributing an existing language to a new package manager, follow all recommended details for publishing that app.  
+- If you are distributing a new language to a package manager, or distributing an existing language to a new package manager, follow all recommended details for publishing that app.
+- Provide all detail possible in the published package, including:
+  - README detailing the API
+  - A link to this (or your sister) repo.
+  - Description of what Parst does and is for
+  - Installation and Usage instructions
+    - Do NOT forget to include how to import Parst for proper use
 - You must include the MIT License in your package.
 - If you wish to publish the new language support in a separate repo, you are welcome to, however I ask please that you submit a PR here that both links to your repo for that language's support AND links to the published package in the [Packages](#packages) section of this document.
   - If creating a "sister" repo like this, please still follow the standards outlined below for adding support.
@@ -116,3 +122,10 @@ RegEx has, without requiring everyone to understand the language to use it.
   - I realize in some languages this could be more difficult than others (such as the use of `python-box` in python).
   - If necessary, importing a well-supported library is allowed, but be mindful of which you choose.
 - All languages need a README file that gives the interface, along with description/params/returns/examples of each method supported by the language (if your language doesn't support named groups, no need to list `extract` or `extract all`)
+- Please keep dependency lists empty if possible.  Dependencies should ideally only be added for:
+  - Parsing a JSON file of regexes
+  - Providing regex support
+    - If, like in JS, the language has a stdlib that has support for regex, but not _full_ support, PLEASE use only the stdlib, and abstain from implementing whatever isn't supported yet
+    - If you can find any links or research about planned support of functionality, link that in the [Regex Feature Support](#feature-support) table above
+  - Providing dot-notation access to methods (as outlined above)
+- If you must use dependencies for the above reasons, or for other very necessary reasons, please do your due diligence and make sure whatever library you import is well supported, well established, and has very few (if any) dependencies itself.
