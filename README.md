@@ -124,8 +124,8 @@ RegEx has, without requiring everyone to understand the language to use it.
 - All languages need a README file that gives the interface, along with description/params/returns/examples of each method supported by the language (if your language doesn't support named groups, no need to list `extract` or `extract all`)
 - Please keep dependency lists empty if possible.  Dependencies should ideally only be added for:
   - Parsing a JSON file of regexes
+  - Providing dot-notation access to methods (as outlined above)
   - Providing regex support
     - If, like in JS, the language has a stdlib that has support for regex, but not _full_ support, PLEASE use only the stdlib, and abstain from implementing whatever isn't supported yet
     - If you can find any links or research about planned support of functionality, link that in the [Regex Feature Support](#feature-support) table above
-  - Providing dot-notation access to methods (as outlined above)
 - If you must use dependencies for the above reasons, or for other very necessary reasons, please do your due diligence and make sure whatever library you import is well supported, well established, and has very few (if any) dependencies itself.
