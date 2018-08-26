@@ -7,13 +7,11 @@ parse many commonly found string patterns.  Many people write complex functions 
 instead of trying to learn a powerful language like RegEx, so this language will help give access to the powers
 RegEx has, without requiring everyone to understand the language to use it.
 
-- **[](#)**
 - **[Packages](#packages)**
 - **[Functionality](#functionality)**
 - **[Regex Support by Language](#feature-support)**
-- **[Contributing Regex Support](#)**
-- **[Contributing Language Support](#)**
-- **[](#)**
+- **[Contributing Regex Support](#add-regex)**
+- **[Contributing Language Support](#add-language)**
 
 ---
 
@@ -62,7 +60,7 @@ RegEx has, without requiring everyone to understand the language to use it.
 
 ---
 
-<a id="featuresupport"></a>
+<a id="feature-support"></a>
 ## Language Support for Named Groups
 
 |  Language  |       Named Groups       | Backreference |
@@ -82,28 +80,28 @@ RegEx has, without requiring everyone to understand the language to use it.
 
 ---
 
-<a id="addregex"></a>
+<a id="add-regex"></a>
 ## Contributing New Regexes
 
 **If you wish to create a new regex to be added to the list:**
 1. Make a branch off `master`, named however you wish
 2. Validate the new regex by hand somewhere such as [Regex101](https://www.regex101.com)
-  - Please create capture groups for the important parts of the regex if you can, or if it will be needed - this will be required to support things like `extract`
-    - If you are unable to or don't understand capture groups well enough, please make a new Issue to add support in the future for that regex.
+  1. Please create capture groups for the important parts of the regex if you can, or if it will be needed - this will be required to support things like `extract`
+    1. If you are unable to or don't understand capture groups well enough, please make a new Issue to add support in the future for that regex.
 3. Add the new regex first to `parst/regexes/README.md` - follow format for new ones based on old.
-  - If the regex will have multiple options (such as the way `postalCodes` do) please make a table for future expansion
-    - For this table, keep the "key" for lookup all lowercase, resorting to `camelCase` if you must
+  1. If the regex will have multiple options (such as the way `postalCodes` do) please make a table for future expansion
+    1. For this table, keep the "key" for lookup all lowercase, resorting to `camelCase` if you must
 4. Add the regex to any or all languages that are supported by Parst - this should be relatively easy (mostly copy/paste)
-  - **IMPORTANT:**  Different languages have different requirements for things like named groups or backreference.  Please refer to [Regex Feature Support](#feature-support) for more information.
-  - **IMPORTANT:**  Each language has some recommended naming scheme (`PascalCase`/`camelCase`/`snake_case`) - please use that naming scheme for the key of the new regex in each language.  If unsure, match the style of other regexes in the datastore for that language.
-  - If you do not want to or cannot for some reason add a regex to a language, either:
-    - Make a new Issue
-    - Add a note to the `parst/regexes/README.md` next to the new regex about which languages still need supporting for that regex.
+  1. **IMPORTANT:**  Different languages have different requirements for things like named groups or backreference.  Please refer to [Regex Feature Support](#feature-support) for more information.
+  2. **IMPORTANT:**  Each language has some recommended naming scheme (`PascalCase`/`camelCase`/`snake_case`) - please use that naming scheme for the key of the new regex in each language.  If unsure, match the style of other regexes in the datastore for that language.
+  3. If you do not want to or cannot for some reason add a regex to a language, either:
+    1. Make a new Issue
+    2. Add a note to the `parst/regexes/README.md` next to the new regex about which languages still need supporting for that regex.
 5. Submit a Pull Request for your branch to be merged into `master`
 
 ---
 
-<a id="addlanguage"></a>
+<a id="add-language"></a>
 ## Contributing Language Support
 
 ### Distribution
@@ -113,8 +111,8 @@ RegEx has, without requiring everyone to understand the language to use it.
   - If creating a "sister" repo like this, please still follow the standards outlined below for adding support.
 
 ### Rules:
-1. Any method calls for new methods, or the names of regexes in the datastore should follow the recommended naming methods for functions in the language you are implementing (e.g. `snake_case` in Python, or `camelCase` in JS)
-2. All languages should provide the same interface for the user:  `parst.<method>.<regexName>(<params>)` e.g. `parst.match.email('foo@bar.com')`.
+- Any method calls for new methods, or the names of regexes in the datastore should follow the recommended naming methods for functions in the language you are implementing (e.g. `snake_case` in Python, or `camelCase` in JS)
+- All languages should provide the same interface for the user:  `parst.<method>.<regexName>(<params>)` e.g. `parst.match.email('foo@bar.com')`.
   - I realize in some languages this could be more difficult than others (such as the use of `python-box` in python).
   - If necessary, importing a well-supported library is allowed, but be mindful of which you choose.
-3. All languages need a README file that gives the interface, along with description/params/returns/examples of each method supported by the language (if your language doesn't support named groups, no need to list `extract` or `extract all`)
+- All languages need a README file that gives the interface, along with description/params/returns/examples of each method supported by the language (if your language doesn't support named groups, no need to list `extract` or `extract all`)
