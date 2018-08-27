@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name='parst',
-  version='1.1.3',
+  version='1.1.4',
   author='Max Bussiere',
   author_email='max.bussiere@gmail.com',
   description='String parsing with common regexes without needing to know Regex',
