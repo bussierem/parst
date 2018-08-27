@@ -14,6 +14,10 @@ parst.match.email('username@gmail.com');
 parst.find.email('some text containing username@gmail.com');
 ```
 
+## Running Tests
+
+Simply run `npm test` to see all tests run!
+
 ### Methods
 **match** (`match.<regex>(compareString)`)
 - Match entire string against \<regex\>

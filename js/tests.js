@@ -3,7 +3,7 @@ const parst = require('./index');
 // TODO: Write some real unit tests - maybe using Mocha/Chai?
 
 // Not enough octects
-console.log(parst.match.ipv4('42.42.42')); // FALSE
+console.log(parst.match.ipv4()); // FALSE
 // first octect out of range
 console.log(parst.match.ipv4('256.124.53.1')); // FALSE
 // third octect out of range

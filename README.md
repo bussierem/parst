@@ -124,6 +124,7 @@ RegEx has, without requiring everyone to understand the language to use it.
 - Please keep dependency lists empty if possible.  Dependencies should ideally only be added for:
   - Parsing a JSON file of regexes
   - Providing dot-notation access to methods (as outlined above)
+  - Providing unit test support
   - Providing regex support
     - If, like in JS, the language has a stdlib that has support for regex, but not _full_ support, PLEASE use only the stdlib, and abstain from implementing whatever isn't supported yet
     - If you can find any links or research about planned support of functionality, link that in the [Regex Feature Support](#feature-support) table above

@@ -19,7 +19,7 @@ module.exports = {
       if (typeof compareStr === 'string') {
         return func(regexStr, compareStr);
       } else {
-        throw 'Parameter is not a string!  Cannot search';
+        throw new TypeError('Parameter is not a string!  Cannot search');
       }
     };
   },
@@ -28,19 +28,19 @@ module.exports = {
       if (typeof compareStr === 'string') {
         return func(regexStr, compareStr, option);
       } else {
-        throw 'Parameter is not a string!  Cannot search';
+        throw new TypeError('Parameter is not a string!  Cannot search');
       }
     }
   },
   mapDualParamFuncNoDefault: (regexStr, func) => {
     return (compareStr, option) => {
       if (!option) {
-        throw 'Replacement string must be defined';
+        throw new Error('Replacement string must be defined');
       }
       if (typeof compareStr === 'string') {
         return func(regexStr, compareStr, option);
       } else {
-        throw 'Parameter is not a string!  Cannot search';
+        throw new TypeError('Parameter is not a string!  Cannot search');
       }
     }
   }

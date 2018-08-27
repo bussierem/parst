@@ -1,5 +1,12 @@
 .DS_STORE
 
+# JS Gitignore
+node_modules/
+logs
+*.log
+npm-debug.log*
+.npm
+
 # Python Gitignore
 __pycache__/
 *.py[cod]

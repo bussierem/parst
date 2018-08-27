@@ -4,7 +4,7 @@
   "description": "A simple interface for many common Regexes for parsing strings",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Max Bussiere <max.bussiere@gmail.com>",
   "license": "MIT",
@@ -12,5 +12,8 @@
     "type": "git",
     "url": "https://github.com/bussierem/parst"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
