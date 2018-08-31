@@ -1,14 +1,16 @@
 import setuptools
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+with open('README.md') as f:
+    long_desc = f.read()
 
 setuptools.setup(
   name='parst',
-  version='1.1.5',
+  version='1.1.7',
   author='Max Bussiere',
   author_email='max.bussiere@gmail.com',
-  description=long_description,
+  description='Parsing Strings with common regexes (without needing to know them!)',
+  long_description=long_desc,
+  long_description_content_type='text/markdown',
   url='https://github.com/bussierem/parst/',
   packages=setuptools.find_packages(),
   classifiers=[
