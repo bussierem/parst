@@ -269,7 +269,7 @@ describe('Regexes', () => {
         assert.equal(parst.match.creditCard.mastercard('5555555555554444'), true);
         assert.equal(parst.match.creditCard.mastercard('5105105105105100'), true);
       });
-      it('Should fail against invalid Mastercard number formats formats', () => {
+      it('Should fail against invalid Mastercard number formats', () => {
         assert.equal(parst.match.creditCard.mastercard('6253064395920303'), false);
         assert.equal(parst.match.creditCard.mastercard('5025399293929959'), false);
         assert.equal(parst.match.creditCard.mastercard('5620564359364320'), false);
@@ -312,6 +312,138 @@ describe('Regexes', () => {
         assert.equal(parst.match.creditCard.discover('6635046939602022'), false);
         assert.equal(parst.match.creditCard.discover('601111111111111'), false);
         assert.equal(parst.match.creditCard.discover('60111111111111177'), false);
+      });
+    });
+  });
+  describe('Dates', () => {
+    describe('M/D/Y', () => {
+      it('Should match valid M/D/Y formats', () => {
+        assert.equal(parst.match.date.mdy('1/1/00'), true);
+        assert.equal(parst.match.date.mdy('1/12/99'), true);
+        assert.equal(parst.match.date.mdy('1-1-1999'), true);
+        assert.equal(parst.match.date.mdy('1-12-1999'), true);
+        assert.equal(parst.match.date.mdy('12.31.1000'), true);
+        assert.equal(parst.match.date.mdy('01.01.00'), true);
+        assert.equal(parst.match.date.mdy('01 01 99'), true);
+        assert.equal(parst.match.date.mdy('01 2 99'), true);
+      });
+      it('Should fail against invalid M/D/Y formats', () => {
+        assert.equal(parst.match.date.mdy('0/12/99'), false);
+        assert.equal(parst.match.date.mdy('1/0/99'), false);
+        assert.equal(parst.match.date.mdy('1/12/999'), false);
+        assert.equal(parst.match.date.mdy('1/12/4'), false);
+        assert.equal(parst.match.date.mdy('13/12/99'), false);
+        assert.equal(parst.match.date.mdy('1/32/99'), false);
+        assert.equal(parst.match.date.mdy('1/12/3999'), false);
+        assert.equal(parst.match.date.mdy('1121999'), false);
+      });
+    });
+    describe('D/M/Y', () => {
+      it('Should match valid D/M/Y formats', () => {
+        assert.equal(parst.match.date.dmy('1/1/00'), true);
+        assert.equal(parst.match.date.dmy('12/1/99'), true);
+        assert.equal(parst.match.date.dmy('1-1-1999'), true);
+        assert.equal(parst.match.date.dmy('12-1-1999'), true);
+        assert.equal(parst.match.date.dmy('31.12.1000'), true);
+        assert.equal(parst.match.date.dmy('01.01.00'), true);
+        assert.equal(parst.match.date.dmy('01 01 99'), true);
+        assert.equal(parst.match.date.dmy('2 01 99'), true);
+      });
+      it('Should fail against invalid D/M/Y formats', () => {
+        assert.equal(parst.match.date.dmy('12/0/99'), false);
+        assert.equal(parst.match.date.dmy('0/1/99'), false);
+        assert.equal(parst.match.date.dmy('12/1/999'), false);
+        assert.equal(parst.match.date.dmy('12/1/4'), false);
+        assert.equal(parst.match.date.dmy('12/13/99'), false);
+        assert.equal(parst.match.date.dmy('32/1/99'), false);
+        assert.equal(parst.match.date.dmy('12/11/3999'), false);
+        assert.equal(parst.match.date.dmy('1211999'), false);
+      });
+    });
+    describe('Y/M/D', () => {
+      it('Should match valid Y/M/D formats', () => {
+        assert.equal(parst.match.date.ymd('00/1/1'), true);
+        assert.equal(parst.match.date.ymd('99/1/12'), true);
+        assert.equal(parst.match.date.ymd('1999-1-1'), true);
+        assert.equal(parst.match.date.ymd('1999-1-12'), true);
+        assert.equal(parst.match.date.ymd('1000.12.31'), true);
+        assert.equal(parst.match.date.ymd('00.01.01'), true);
+        assert.equal(parst.match.date.ymd('99 01 01'), true);
+        assert.equal(parst.match.date.ymd('99 01 2'), true);
+      });
+      it('Should fail against invalid Y/M/D formats', () => {
+        assert.equal(parst.match.date.ymd('99/0/12'), false);
+        assert.equal(parst.match.date.ymd('99/1/0'), false);
+        assert.equal(parst.match.date.ymd('999/1/12'), false);
+        assert.equal(parst.match.date.ymd('4/1/12'), false);
+        assert.equal(parst.match.date.ymd('99/13/12'), false);
+        assert.equal(parst.match.date.ymd('99/1/32'), false);
+        assert.equal(parst.match.date.ymd('3999/1/12'), false);
+        assert.equal(parst.match.date.ymd('1999112'), false);
+      });
+    });
+    describe('Japanese Era', () => {
+      it('Should match valid Japanese Era formats', () => {
+        assert.equal(parst.match.date.jpEraYear('Heisei 1'), true);
+        assert.equal(parst.match.date.jpEraYear('Heisei 10'), true);
+        assert.equal(parst.match.date.jpEraYear('Heisei 99'), true);
+        assert.equal(parst.match.date.jpEraYear('Showa 555'), true);
+        assert.equal(parst.match.date.jpEraYear('Showa24'), true);
+        assert.equal(parst.match.date.jpEraYear('H1'), true);
+        assert.equal(parst.match.date.jpEraYear('H10'), true);
+        assert.equal(parst.match.date.jpEraYear('H99'), true);
+        assert.equal(parst.match.date.jpEraYear('H 10'), true);
+        assert.equal(parst.match.date.jpEraYear('S 55'), true);
+        assert.equal(parst.match.date.jpEraYear('S555'), true);
+      });
+      it('Should fail against invalid Japanese Era formats', () => {
+        assert.equal(parst.match.date.jpEraYear('Heisei 0'), false);
+        assert.equal(parst.match.date.jpEraYear('Heisei 5555'), false);
+        assert.equal(parst.match.date.jpEraYear('H5555'), false);
+        assert.equal(parst.match.date.jpEraYear('Showa-1'), false);
+        assert.equal(parst.match.date.jpEraYear('Showa-25'), false);
+        assert.equal(parst.match.date.jpEraYear('H-55'), false);
+      });
+    });
+  });
+  describe('Times', () => {
+    describe('12-hour Format', () => {
+      it('Should match valid 12-hour time formats', () => {
+        assert.equal(parst.match.time12('01:30 pm'), true);
+        assert.equal(parst.match.time12('01:30:00 Am'), true);
+        assert.equal(parst.match.time12('12:59:59 PM'), true);
+        assert.equal(parst.match.time12('12:59:59 AM NT'), true);
+        assert.equal(parst.match.time12('12:59:59 AM PST'), true);
+        assert.equal(parst.match.time12('12:59:59 Pm ACST'), true);
+        assert.equal(parst.match.time12('1:45:00'), true);
+        assert.equal(parst.match.time12('1:00'), true);
+      });
+      it('Should fail against invalid 12-hour time formats', () => {
+        assert.equal(parst.match.time12('0:40 pm'), false);
+        assert.equal(parst.match.time12('2:45 blah CST'), false);
+        assert.equal(parst.match.time12('2:60 pm'), false);
+        assert.equal(parst.match.time12('13:30 am'), false);
+        assert.equal(parst.match.time12('2:45 am ABCDEFG'), false);
+        assert.equal(parst.match.time12('1 45 am PST'), false);
+      });
+    });
+    describe('24-hour Format', () => {
+      it('Should match valid 24-hour time formats', () => {
+        assert.equal(parst.match.time24('0:00'), true);
+        assert.equal(parst.match.time24('00:00'), true);
+        assert.equal(parst.match.time24('00:00 PST'), true);
+        assert.equal(parst.match.time24('23:00'), true);
+        assert.equal(parst.match.time24('23:59'), true);
+        assert.equal(parst.match.time24('23:00 CT'), true);
+        assert.equal(parst.match.time24('23:00 ABCDE'), true);
+      });
+      it('Should fail against invalid 24-hour time formats', () => {
+        assert.equal(parst.match.time24('0:0'), false);
+        assert.equal(parst.match.time24('00:0'), false);
+        assert.equal(parst.match.time24('00:00 A'), false);
+        assert.equal(parst.match.time24('24:00 PST'), false);
+        assert.equal(parst.match.time24('23:60 NT'), false);
+        assert.equal(parst.match.time24('2300 NT'), false);
       });
     });
   });
