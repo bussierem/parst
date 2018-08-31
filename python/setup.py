@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name='parst',
-  version='1.1.4',
+  version='1.1.5',
   author='Max Bussiere',
   author_email='max.bussiere@gmail.com',
-  description='String parsing with common regexes without needing to know Regex',
+  description=long_description,
   url='https://github.com/bussierem/parst/',
   packages=setuptools.find_packages(),
   classifiers=[
